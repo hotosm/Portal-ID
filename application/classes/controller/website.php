@@ -14,7 +14,10 @@ abstract class Controller_Website extends Controller_Template {
 			);
 
 			$this->template->scripts = array(
-				'http://www.openlayers.org/api/OpenLayers.js',
+				'assets/js/jquery.min.js',
+				'assets/js/jquery.custom.js',
+				'assets/js/modestmaps.min.js',
+				'assets/js/wax.mm.min.js',
 				'assets/js/maps.js'
 			);
 		}
