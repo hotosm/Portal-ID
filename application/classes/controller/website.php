@@ -10,7 +10,8 @@ abstract class Controller_Website extends Controller_Template {
 		{
 			$this->template->styles = array(
 				'assets/css/master.css' => 'screen',
-				'assets/css/ie.css' => 'screen'
+				'assets/css/ie.css' => 'screen',
+				'assets/css/wax-controls.css' => 'screen'
 			);
 
 			$this->template->scripts = array(
