@@ -80,7 +80,7 @@ h1 { font-size: 2.6em; }
 h2 {
 	margin: 10px 0 15px;
 	padding-bottom: 2px;
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid #E95C41;
 	font-size: 2em;
 	font-weight: lighter;
 	}
@@ -153,12 +153,12 @@ em { font-style: italic; }
 	}
 #nav li {
 	float: left;
+	width: 7em;
 	}
 #nav li a {
 	display: block;
 	float: left;
 	height: 95px;
-	width: 4.8em;
 	border-left: 1px solid #333;
 	border-right: 1px solid #000;
 	padding: 30px 20px 15px;
@@ -190,7 +190,6 @@ body.locations #nav li#nav_locations a,
 body.projects #nav li#nav_projects a,
 body.resources #nav li#nav_resources a,
 body.about #nav li#nav_about a {
-	background: rgba(0,0,0,.25) url(../img/nav-arrow.png) no-repeat 15% 100%;
 	}
 body.home #nav li#nav_home a small,
 body.locations #nav li#nav_locations a small,
@@ -224,6 +223,11 @@ body.about #nav li#nav_about a small {
 
 #bento {
 	position: relative;
+	}
+#bentoInner {
+	background: #fff;
+	box-shadow: 0 0 5px #A09A95;
+	border: 8px solid rgba(0,0,0,.5);
 	}
 body.home #bento,
 body.locaton #bento,
