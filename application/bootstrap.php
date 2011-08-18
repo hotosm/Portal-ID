@@ -131,12 +131,18 @@ Route::set('default', '((<lang>/)<page>)', array('lang' => "({$langs_abr})",'id'
 		'action'     => 'load',
 	));
 
-// Locations
+//Locations
 Route::set('location', 'locations/<page>')
 	->defaults(array(
 		'controller' => 'page',
 		'action' => 'location',
 	));
+// Route::set('location','locations/<location>', array('location' => 'bantaeng|baubau|bima|dompu
+// |kupang|lompok|takalar|waingapu'))
+// 	->defaults(array(
+// 		'controller' => 'page',
+// 		'action' => 'load',
+// 	));
 
 // Handles: download/$file
 Route::set('file', 'download/<file>', array('file' => '.+'))

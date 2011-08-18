@@ -9,11 +9,6 @@
 */
 
 
-/*	=RESET YUIv3 */
-
-html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
-
-
 
 /*//	=GRID  1140 */
 
@@ -41,37 +36,39 @@ img{height:auto;}
 /*// =GLOBAL */
 
 html,body {
-	font-family: "Gill Sans", "Apple Gothic", sans-serif;
+	font-size: 1em;
 	color: #222;
-	background-color: #E6DDD7;
+	background: #E6DDD7 url(../images/bg.png) repeat 0 0;
 	color: #292000;
 	height: 100%;
 	}
 
 /* links */
 a,a:active {
-	color: orange;
+	color: rgba(233, 92, 65, 1);
 	}
 
 /* lists */
-ul.nav {
+ul.horz {
 	margin: 0;
 	padding: 0;
 	}
-ul.nav li {
+ul.horz li {
 	list-style-type: none;
 	display: block;
 	float: left;
 	margin: 0;
 	padding: 0;
 	}
-ul.nav li a {
+ul.horz li {
 	display: block;
 	float: left;
 	}
 
 /* headers */
 h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-family: "Gill Sans", "Apple Gothic", sans-serif;
 	font-weight: lighter;
 	letter-spacing: .04em;
 	text-shadow: 1px 1px 0 #fff;
@@ -86,6 +83,14 @@ h2 {
 	}
 h3 {
 	font-size: 1.6em;
+	}
+h4 {
+	padding: .5em;
+	background: rgba(233, 92, 65, 1);
+	color: #fff;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	text-shadow: 3px 3px 0 rgba(182, 71, 50, 1);
 	}
 
 /* typography */
@@ -112,7 +117,7 @@ em { font-style: italic; }
 
 #header {
 	z-index: 5;
-	height: 140px;
+	height: 120px;
 	background-color: #222;
 	border-bottom: 1px solid white;
 	}
@@ -121,56 +126,60 @@ em { font-style: italic; }
 #logo {
 	float: left;
 	display: inline;
-	margin-top: 1.5em;
+	margin-top: 1em;
 	color: #fff;
 	}
 #logo h1 {
+	margin: 0;
 	line-height: 1em;
 	text-shadow: 2px 2px 2px #000;
+	font-weight: lighter;
 	}
 #logo h1 a {
 	color: #fff;
 	text-decoration: none;
 	}
 #logo h1 a span {
-	color: red;
+	color: rgba(233, 92, 65, 1);
 	text-shadow: 2px 2px 2px #000;
 	}
 #logo p {
-	margin-left: 5px;
-	color: #bbb;
-	font-size: 90%;
-	line-height: 1.8em;
+	margin: .3em 5px;
+	color: #ddd;
+	font-size: .75em;
+	line-height: 2.5em;
+	font-family: Georgia, Times, serif;
 	}
 
 /* navigation */
-#nav {
+nav ul {
 	display: block;
 	float: right;
 	height: 100%;
 	border-left: 1px solid #000;
 	border-right: 1px solid #333;
 	}
-#nav li {
+nav ul li {
 	float: left;
-	width: 7em;
+	width: 120px;
 	}
-#nav li a {
+nav ul li a {
 	display: block;
 	float: left;
 	height: 95px;
 	border-left: 1px solid #333;
 	border-right: 1px solid #000;
-	padding: 30px 20px 15px;
-	color: #FFF;
+	padding: 25px 0 0 15px;
+	color: rgba(217, 191, 100, 1);
 	font-size: 17px;
 	line-height: 1em;
+	font-family: "Gill Sans", Corbel, Tahoma, sans-serif;
 	text-decoration: none;
 	}
-#nav li a small {
-	text-shadow: none !important;
+nav ul li a:visited {
+	color: rgba(217, 191, 100, 1);
 	}
-#nav li a small {
+nav ul li a small {
 	display: block;
 	padding-top: .9em;
 	font-style: italic;
@@ -178,27 +187,30 @@ em { font-style: italic; }
 	font-size: .7em;
 	line-height: 1.2em;
 	color: #eee;
+	text-shadow: none !important;
 	}
-#nav li a:hover {
+nav ul li a:hover {
 	background: rgba(0,0,0,.2);
   }
-#nav li a:hover small {
+nav ul li a:hover small {
 	color: #fff;
 	}
-body.home #nav li#nav_home a,
-body.locations #nav li#nav_locations a,
-body.projects #nav li#nav_projects a,
-body.resources #nav li#nav_resources a,
-body.about #nav li#nav_about a {
+body.home nav ul li#nav_home a,
+body.locations nav ul li#nav_locations a,
+body.projects nav ul li#nav_projects a,
+body.resources nav ul li#nav_resources a,
+body.about nav ul li#nav_about a {
+	background: rgba(0,0,0,.2);
+	color: rgba(246, 234, 0, 1);
 	}
-body.home #nav li#nav_home a small,
-body.locations #nav li#nav_locations a small,
-body.projects #nav li#nav_projects a small,
-body.resources #nav li#nav_resources a small,
-body.about #nav li#nav_about a small {
+body.home nav ul li#nav_home a small,
+body.locations nav ul li#nav_locations a small,
+body.projects nav ul li#nav_projects a small,
+body.resources nav ul li#nav_resources a small,
+body.about nav ul li#nav_about a small {
   color: #fff;
 	}
-#nav li a.selected {
+nav ul li a.selected {
 
 	}
 
@@ -214,48 +226,63 @@ body.about #nav li#nav_about a small {
 #lang ul li {
 	padding-left: 10px;
 	}
-#lang ul li a {
-	color: red;
-	}
 
 
 /*//	=CONTENT */
 
+#wrapper {
+	min-height: 100%;
+	}
 #bento {
-	position: relative;
+	overflow: auto;
+	margin-top: 1em;
 	}
 #bentoInner {
+	overflow: hidden;
 	background: #fff;
 	box-shadow: 0 0 5px #A09A95;
-	border: 8px solid rgba(0,0,0,.5);
-	}
-body.home #bento,
-body.locaton #bento,
-body.locations #bento {
-	margin-top: -25px;
+	z-index: 1000;
 	}
 
-
-#bento .pageIntro,
-#bento h1#pagetitle {
-	margin-top: .5em;
-	margin-bottom: 1em;
+#pageIntro {
+	padding: .5em 0;
+	background: rgba(34, 34, 34, 1);
 	}
-#bento .pageIntro p {
+h1#pageTitle {
+	margin: 0;
+	color: #fff;
+	text-shadow: 3px 3px 0 rgba(0,0,0, 1);
+	font-weight: lighter;
+	color: rgba(233, 92, 65, 1);
+	text-transform: uppercase;
+	font-size: 1.8em;
+	}
+h1#pageTitle span {
+	color: #888;
+	}
+#pageIntro p {
 	width: 70%;
-	}
-#bento h1#pageTitle {
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 rgba(0,0,0, 1);
 	}
 #bento p {
 	margin-bottom: 15px;
+	line-height: 1.4em;
+	font-family: Georgia, "Lucida Grande", "Lucida Sans";
 	}
-#bento dl dt {
-	border-bottom: 1px solid #fff;
-	padding-bottom: .1em;
-	margin-bottom: .2em;
+#bento dl {
+	overflow: hidden;
+	}
+#bento dl dt.image {
+	float: left;
+	margin-right: 1em;
 	}
 #bento dl dd {
-	font-size: 90%;
+	font-size: .8em;
+	}
+#bento dl dd.title {
+	font-weight: bold;
 	}
 
 ul.rows {
@@ -275,26 +302,16 @@ ul.rows li a:hover {
 
 
 /* maps */
-.box {
-	position: relative;
-	z-index: 100;
-	padding: 10px;
+div.map {
 	overflow: hidden;
-	background: #fff;
-	box-shadow: 0 2px 10px #BBB;
-	text-shadow: none;
-	}
-#map {
 	margin: 10px;
 	background: #eee;
-	position: relative;
-	height: 100%;
 	}
 	
 
-/* Sidebar */
+/* sections */
 .section {
-	margin-bottom: 2em;
+	margin: 1.5em 0;
 	}
 .section h2 {
 	margin-bottom: 1em;
@@ -313,8 +330,8 @@ ul.rows li a:hover {
 /* PAGES */
 
 /* Homepage map */
-body.home .box {
-	height: 500px;
+body.home .map {
+	height: 480px;
 	}
 
 /* stats */
@@ -322,43 +339,51 @@ body.home .box {
 	border-bottom: 1px solid black;
 	padding-bottom: .3em;
 	margin-bottom: .7em;
+	font-family: "Gill Sans", Tahoma, Arial, sans-serif;
 	}
-#stats h5 {
+#stats h3 {
 	float: left;
-	font-family: Helvetica, Arial, sans-serif;
+	margin: .2em;
+	font-size: 4em !important;
 	font-weight: bold;
 	font-size: 3.2em;
-	margin-right: .25em;
-	padding-right: .25em;
-	border-right: 1px solid black;
+	color: rgba(182, 71, 50, 1);
 	}
-#stats small {
+#stats p {
 	display: block;
+	font-family: "Gill Sans", Tahoma, Arial, sans-serif;
 	}
 
 
 /* Locations */
-body.locations #map {
-	height: 500px;
-	}
-	
-/* Location */
-body.location .box {
+body.locations .map {
 	height: 500px;
 	}
 
+	
+/* Location */
+body.location .map {
+	height: 500px;
+	}
 
 
 
 /*//	=FOOTER */
 
-#footer {
-	margin-top: 15px;
-	padding: 10px 0;
-	border-top: 1px solid #877E75;
+footer {
+	position: relative;
+	margin-top: -60px;
+	height: 60px;
+	clear:both;
+	background: #000;
 	}
-#footer p {
-	color: #C2B199;
+#footerInner {
+	width: 960px;
+	margin: 0 auto;
+	padding: 5px 0;
+	}
+footer p {
+	color: #ccc;
 	}
 
 
@@ -409,12 +434,12 @@ body.location .box {
 		}
 
 		/* nav */
-		ul#nav li a span {
+		ulnav ul li a span {
 			display: none;
 		}
-		ul#nav,
-		ul#nav li,
-		ul#nav a {
+		ulnav ul,
+		ulnav ul li,
+		ulnav ul a {
 			border: 0;
 		}
 
